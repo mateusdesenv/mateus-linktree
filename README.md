@@ -8,6 +8,8 @@ Projeto estático criado em **HTML, CSS e JavaScript**, inspirado no mockup apro
 - `styles.css`
 - `script.js`
 - `assets/avatar-mateus.jpg`
+- `assets/fallen.webp`
+- `assets/sarcastica.webp`
 - `assets/favicon.svg`
 
 ## Como configurar os links
@@ -20,7 +22,9 @@ Há três URLs que permanecem como placeholder porque não foram informadas:
 
 Os links já preenchidos são:
 
-- TikTok do parceiro: `https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO`
+- TikTok do parceiro em destaque: `https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO`
+- TikTok do Fallen: `https://www.tiktok.com/@hey_fallen_dallas22`
+- TikTok da Sarcástica: `https://www.tiktok.com/@sarcastica`
 - Instagram da Codex: `https://www.instagram.com/co.dexaweb/`
 - LinkedIn da Codex: `https://www.linkedin.com/company/codexa-web`
 - LinkedIn pessoal: `https://www.linkedin.com/in/mateus-camargo-rodrigues/`

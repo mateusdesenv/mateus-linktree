@@ -1,11 +1,28 @@
 // Edite apenas as URLs abaixo para publicar a página com os links definitivos.
 const LINKS = [
   {
-    title: "TikTok do parceiro",
-    caption: "Conteúdo e bastidores",
+    title: "Ajude o parceiro no TikTok",
+    caption: "Faltam só 50 seguidores para liberar live",
     platform: "tiktok",
     color: "#28f4e5",
     url: "https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO",
+    featured: true,
+  },
+  {
+    title: "TikTok do Fallen",
+    caption: "Parceiro Codex",
+    platform: "tiktok",
+    color: "#f02cff",
+    url: "https://www.tiktok.com/@hey_fallen_dallas22",
+    image: "./assets/fallen.webp",
+  },
+  {
+    title: "TikTok da Sarcástica",
+    caption: "Parceira Codex",
+    platform: "tiktok",
+    color: "#00f08a",
+    url: "https://www.tiktok.com/@sarcastica",
+    image: "./assets/sarcastica.webp",
   },
   {
     title: "WhatsApp da Codex",
@@ -87,7 +104,7 @@ function isPlaceholder(url) {
 
 function createLinkCard(link, index) {
   const anchor = document.createElement("a");
-  anchor.className = "link-card";
+  anchor.className = `link-card${link.featured ? " link-card--featured" : ""}`;
   anchor.href = link.url;
   anchor.target = "_blank";
   anchor.rel = "noopener noreferrer";
@@ -101,7 +118,13 @@ function createLinkCard(link, index) {
   }
 
   anchor.innerHTML = `
-    <span class="link-icon">${ICONS[link.platform]}</span>
+    <span class="link-icon">
+      ${
+        link.image
+          ? `<img class="custom-link-icon" src="${link.image}" alt="" loading="lazy" decoding="async" />`
+          : ICONS[link.platform]
+      }
+    </span>
     <span class="link-copy">
       <span class="link-title">${link.title}</span>
       <span class="link-caption">${link.caption}</span>
