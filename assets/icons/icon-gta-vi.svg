@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Sorteo GTA VI">
+  <defs>
+    <linearGradient id="vice" x1="12" y1="84" x2="84" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#13d8ff"/>
+      <stop offset=".28" stop-color="#783bff"/>
+      <stop offset=".58" stop-color="#ff3fb7"/>
+      <stop offset="1" stop-color="#ff9b35"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="72%" cy="22%" r="48%">
+      <stop offset="0" stop-color="#fff5a8" stop-opacity=".94"/>
+      <stop offset=".35" stop-color="#ff9b35" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ff3fb7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="viceGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ff4fd8" flood-opacity=".66"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#13d8ff" flood-opacity=".42"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity=".4"/>
+    </filter>
+  </defs>
+  <rect x="5" y="5" width="86" height="86" rx="24" fill="#0b0713"/>
+  <rect x="8" y="8" width="80" height="80" rx="22" fill="url(#vice)" filter="url(#viceGlow)"/>
+  <rect x="8" y="8" width="80" height="80" rx="22" fill="url(#sun)"/>
+  <path fill="none" stroke="#0c0813" stroke-opacity=".36" stroke-width="2" d="M17 68c12-8 21-9 31-5s18 2 31-8M18 74c14-7 26-6 37-2s17 1 25-6"/>
+  <path fill="#0c0813" fill-opacity=".42" d="M23 68c8-23 15-30 27-39-5 14-7 23-5 37l-7 2c-1-9 0-17 2-25-5 7-8 16-11 27l-6-2Z"/>
+  <text x="48" y="46" text-anchor="middle" fill="#101014" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="1">GTA</text>
+  <text x="48" y="70" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="1">VI</text>
+  <text x="48" y="70" text-anchor="middle" fill="none" stroke="#101014" stroke-opacity=".42" stroke-width="1.1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="1">VI</text>
+</svg>

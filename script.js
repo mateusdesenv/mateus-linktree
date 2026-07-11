@@ -1,57 +1,84 @@
 // Edite apenas as URLs abaixo para publicar a página com os links definitivos.
-const LINKS = [
+const LINK_SECTIONS = [
   {
-    title: "Ajude o parceiro no TikTok",
-    caption: "Faltam só 50 seguidores para liberar live",
-    platform: "tiktok",
-    color: "#9dff00",
-    url: "https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO",
-    featured: true,
-    image: "./assets/partner-live.webp",
+    title: "Parcerias no TikTok",
+    links: [
+      {
+        title: "Apoie o parceiro no TikTok",
+        caption: "Faltam só 50 seguidores para liberar live",
+        platform: "tiktok",
+        color: "#9dff00",
+        url: "https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO",
+        featured: true,
+        image: "./assets/partner-live.webp",
+      },
+      {
+        title: "Sorteio GTA VI",
+        caption: "Participe pela árvore de links oficial",
+        platform: "gta",
+        color: "#ff4fd8",
+        url: "https://sorteio-gta-vi-tree.vercel.app/?perfil=codexa",
+        image: "./assets/icons/icon-gta-vi.svg",
+      },
+      {
+        title: "TikTok de Fallen",
+        caption: "Parceiro Codex",
+        platform: "tiktok",
+        color: "#f02cff",
+        url: "https://www.tiktok.com/@hey_fallen_dallas22",
+        image: "./assets/fallen.webp",
+      },
+      {
+        title: "TikTok de Sarcástica",
+        caption: "Parceira Codex",
+        platform: "tiktok",
+        color: "#00f08a",
+        url: "https://www.tiktok.com/@sarcastica",
+        image: "./assets/sarcastica.webp",
+      },
+    ],
   },
   {
-    title: "TikTok do Fallen",
-    caption: "Parceiro Codex",
-    platform: "tiktok",
-    color: "#f02cff",
-    url: "https://www.tiktok.com/@hey_fallen_dallas22",
-    image: "./assets/fallen.webp",
-  },
-  {
-    title: "TikTok da Sarcástica",
-    caption: "Parceira Codex",
-    platform: "tiktok",
-    color: "#00f08a",
-    url: "https://www.tiktok.com/@sarcastica",
-    image: "./assets/sarcastica.webp",
-  },
-  {
-    title: "WhatsApp da Codex",
-    caption: "Solicite um orçamento",
-    platform: "whatsapp",
-    color: "#31d158",
-    url: "https://wa.me/55SEUNUMERO",
-  },
-  {
-    title: "Instagram da Codex",
-    caption: "Projetos, conteúdo e novidades",
-    platform: "instagram",
-    color: "#e84e9b",
-    url: "https://www.instagram.com/co.dexaweb/",
-  },
-  {
-    title: "LinkedIn da Codex",
-    caption: "Siga a página da empresa",
-    platform: "linkedin",
-    color: "#35a8ff",
-    url: "https://www.linkedin.com/company/codexa-web",
-  },
-  {
-    title: "Meu LinkedIn",
-    caption: "Carreira e desenvolvimento",
-    platform: "linkedin",
-    color: "#35a8ff",
-    url: "https://www.linkedin.com/in/mateus-camargo-rodrigues/",
+    title: "Redes sociais",
+    links: [
+      {
+        title: "WhatsApp da Codex",
+        caption: "Solicite um orçamento",
+        platform: "whatsapp",
+        color: "#31d158",
+        url: "https://wa.me/52SEUNUMERO",
+        image: "./assets/icons/icon-whatsapp.svg",
+      },
+      {
+        title: "Codex Live Projects",
+        caption: "Envie seu projeto para análise ao vivo",
+        platform: "live",
+        color: "#9dff00",
+        url: "https://codexa-live-projects.vercel.app/",
+        image: "./assets/icons/icon-live-projects.svg",
+      },
+      {
+        title: "Instagram da Codex",
+        caption: "Projetos, conteúdo e novidades",
+        platform: "instagram",
+        color: "#e84e9b",
+        url: "https://www.instagram.com/co.dexaweb/",
+      },
+      {
+        title: "LinkedIn da Codex",
+        caption: "Siga a página da empresa",
+        platform: "linkedin",
+        color: "#35a8ff",
+        url: "https://www.linkedin.com/company/codexa-web",
+      },
+      {
+        title: "Meu LinkedIn",
+        caption: "Carrera y desarrollo",
+        platform: "linkedin",
+        color: "#35a8ff",
+        url: "https://www.linkedin.com/in/mateus-camargo-rodrigues/",
+      },
+    ],
   },
 ];
 
@@ -89,6 +116,27 @@ const ICONS = {
     <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
       <rect x="3" y="3" width="26" height="26" rx="5" fill="#0A66C2"/>
       <path fill="#fff" d="M9.2 13.2h3.2V24H9.2V13.2Zm1.6-5.3a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8Zm3.8 5.3h3.1v1.5h.1c.4-.8 1.5-1.9 3.2-1.9 3.4 0 4 2.2 4 5.2v6h-3.2v-5.3c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V24h-3.2V13.2Z"/>
+    </svg>
+  `,
+  gta: `
+    <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
+      <defs>
+        <linearGradient id="gtaA" x1="4" y1="28" x2="28" y2="4" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#33d6ff"/>
+          <stop offset="45%" stop-color="#ff4fd8"/>
+          <stop offset="100%" stop-color="#ff9a3d"/>
+        </linearGradient>
+      </defs>
+      <rect x="3" y="3" width="26" height="26" rx="7" fill="url(#gtaA)"/>
+      <text x="16" y="15" text-anchor="middle" fill="#101014" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="900">GTA</text>
+      <text x="16" y="24" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="900">VI</text>
+    </svg>
+  `,
+  live: `
+    <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
+      <rect x="3" y="3" width="26" height="26" rx="7" fill="#9DFF00"/>
+      <path fill="#071007" d="M8.2 9.2h3.6v10.2h5.4v3.4h-9V9.2Zm10 0h3.6v13.6h-3.6V9.2Z"/>
+      <circle cx="24.4" cy="11.4" r="2.2" fill="#ff2f6d"/>
     </svg>
   `,
 };
@@ -165,14 +213,30 @@ function createRipple(event, element) {
 
 function renderLinks() {
   const list = document.querySelector("#links-list");
+  let cardIndex = 0;
 
-  LINKS.forEach((link, index) => {
-    const card = createLinkCard(link, index);
-    list.appendChild(card);
+  LINK_SECTIONS.forEach((section) => {
+    const sectionElement = document.createElement("section");
+    sectionElement.className = "link-section";
+    sectionElement.setAttribute("aria-label", section.title);
 
-    window.setTimeout(() => {
-      card.classList.add("is-visible");
-    }, 100 + index * 85);
+    const heading = document.createElement("h2");
+    heading.className = "link-section-title";
+    heading.textContent = section.title;
+    sectionElement.appendChild(heading);
+
+    section.links.forEach((link) => {
+      const card = createLinkCard(link, cardIndex);
+      sectionElement.appendChild(card);
+
+      window.setTimeout(() => {
+        card.classList.add("is-visible");
+      }, 100 + cardIndex * 85);
+
+      cardIndex += 1;
+    });
+
+    list.appendChild(sectionElement);
   });
 }
 
