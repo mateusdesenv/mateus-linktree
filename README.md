@@ -8,6 +8,7 @@ Projeto estático criado em **HTML, CSS e JavaScript**, inspirado no mockup apro
 - `styles.css`
 - `script.js`
 - `assets/avatar-mateus.jpg`
+- `assets/partner-live.webp`
 - `assets/fallen.webp`
 - `assets/sarcastica.webp`
 - `assets/favicon.svg`

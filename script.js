@@ -4,9 +4,10 @@ const LINKS = [
     title: "Ajude o parceiro no TikTok",
     caption: "Faltam só 50 seguidores para liberar live",
     platform: "tiktok",
-    color: "#28f4e5",
+    color: "#9dff00",
     url: "https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO",
     featured: true,
+    image: "./assets/partner-live.webp",
   },
   {
     title: "TikTok do Fallen",
