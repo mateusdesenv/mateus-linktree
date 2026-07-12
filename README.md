@@ -20,8 +20,9 @@ Projeto estático criado em **HTML, CSS e JavaScript**, inspirado no mockup apro
 
 Abra o arquivo `script.js` e altere somente as URLs dentro de `LINK_SECTIONS`.
 
-Os cards agora estão divididos em duas categorias:
+Os cards agora estão divididos em três categorias:
 
+- `Produtos da Aquadexa`
 - `Parcerias no TikTok`
 - `Redes sociais`
 
@@ -31,7 +32,10 @@ Há uma URL que permanece como placeholder porque não foi informada:
 
 Os links já configurados são:
 
-- TikTok do parceiro em destaque: `https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO`
+- Vitrinefolio: `https://vitrinefolio.vercel.app/`
+- MinutaAI: `https://minutaai.com/`
+- Gestão Paroquial: `https://gestaoparoquial.com/`
+- TikTok do Cambão: `https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO` (comentado temporariamente no `script.js`)
 - Sorteio GTA VI: `https://sorteio-gta-vi-tree.vercel.app/?perfil=codexa`
 - TikTok de Fallen: `https://www.tiktok.com/@hey_fallen_dallas22`
 - TikTok de Sarcástica: `https://www.tiktok.com/@sarcastica`

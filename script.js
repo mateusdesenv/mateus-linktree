@@ -1,17 +1,52 @@
 // Edite apenas as URLs abaixo para publicar a página com os links definitivos.
 const LINK_SECTIONS = [
   {
-    title: "Parcerias no TikTok",
+    title: "Produtos da Aquadexa",
+    highlight: true,
     links: [
       {
-        title: "Apoie o parceiro no TikTok",
-        caption: "Faltam só 50 seguidores para liberar live",
-        platform: "tiktok",
-        color: "#9dff00",
-        url: "https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO",
+        title: "Vitrinefolio",
+        caption: "Portfólios profissionais para vender mais",
+        platform: "product",
+        color: "#66e6ff",
+        url: "https://vitrinefolio.vercel.app/",
         featured: true,
-        image: "./assets/partner-live.webp",
+        badge: "produto",
       },
+      {
+        title: "MinutaAI",
+        caption: "Inteligência artificial para documentos jurídicos",
+        platform: "product",
+        color: "#a7ff5e",
+        url: "https://minutaai.com/",
+        featured: true,
+        badge: "produto",
+      },
+      {
+        title: "Gestão Paroquial",
+        caption: "Sistema para organizar rotinas paroquiais",
+        platform: "product",
+        color: "#ffcf5a",
+        url: "https://gestaoparoquial.com/",
+        featured: true,
+        badge: "produto",
+      },
+    ],
+  },
+  {
+    title: "Parcerias no TikTok",
+    links: [
+      // TikTok do Cambão pausado temporariamente. Reativar futuramente mantendo este bloco.
+      // {
+      //   title: "Apoie o parceiro no TikTok",
+      //   caption: "Faltam só 50 seguidores para liberar live",
+      //   platform: "tiktok",
+      //   color: "#9dff00",
+      //   url: "https://www.tiktok.com/@ismael.sotero6?_r=1&_t=ZS-97voVjLwFsO",
+      //   featured: true,
+      //   image: "./assets/partner-live.webp",
+      //   badge: "apoya",
+      // },
       {
         title: "Sorteio GTA VI",
         caption: "Participe pela árvore de links oficial",
@@ -139,6 +174,11 @@ const ICONS = {
       <circle cx="24.4" cy="11.4" r="2.2" fill="#ff2f6d"/>
     </svg>
   `,
+  product: `
+    <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
+      <path fill="currentColor" d="M16 3.4 5.8 8.5v10.9L16 28.6l10.2-9.2V8.5L16 3.4Zm0 3.4 5.8 2.9-5.8 2.9-5.8-2.9L16 6.8ZM8.8 12.4l5.7 2.9v8l-5.7-5.1v-5.8Zm8.7 10.9v-8l5.7-2.9v5.8l-5.7 5.1Z"/>
+    </svg>
+  `,
 };
 
 const ARROW_ICON = `
@@ -158,6 +198,7 @@ function createLinkCard(link, index) {
   anchor.target = "_blank";
   anchor.rel = "noopener noreferrer";
   anchor.style.setProperty("--platform-color", link.color);
+  if (link.badge) anchor.dataset.badge = link.badge;
   anchor.setAttribute("aria-label", `Abrir ${link.title}`);
   anchor.dataset.index = String(index);
 
@@ -171,7 +212,7 @@ function createLinkCard(link, index) {
       ${
         link.image
           ? `<img class="custom-link-icon" src="${link.image}" alt="" loading="lazy" decoding="async" />`
-          : ICONS[link.platform]
+          : ICONS[link.platform] || ICONS.product
       }
     </span>
     <span class="link-copy">
@@ -191,6 +232,29 @@ function createLinkCard(link, index) {
   });
 
   return anchor;
+}
+
+function createSection(section, sectionIndex) {
+  const wrapper = document.createElement("section");
+  wrapper.className = `link-section${section.highlight ? " link-section--highlight" : ""}`;
+  wrapper.setAttribute("aria-label", section.title);
+
+  const title = document.createElement("h2");
+  title.className = "link-section-title";
+  title.textContent = section.title;
+  wrapper.appendChild(title);
+
+  section.links.forEach((link, linkIndex) => {
+    const cardIndex = sectionIndex * 10 + linkIndex;
+    const card = createLinkCard(link, cardIndex);
+    wrapper.appendChild(card);
+
+    window.setTimeout(() => {
+      card.classList.add("is-visible");
+    }, 100 + cardIndex * 85);
+  });
+
+  return wrapper;
 }
 
 function createRipple(event, element) {
@@ -213,30 +277,9 @@ function createRipple(event, element) {
 
 function renderLinks() {
   const list = document.querySelector("#links-list");
-  let cardIndex = 0;
 
-  LINK_SECTIONS.forEach((section) => {
-    const sectionElement = document.createElement("section");
-    sectionElement.className = "link-section";
-    sectionElement.setAttribute("aria-label", section.title);
-
-    const heading = document.createElement("h2");
-    heading.className = "link-section-title";
-    heading.textContent = section.title;
-    sectionElement.appendChild(heading);
-
-    section.links.forEach((link) => {
-      const card = createLinkCard(link, cardIndex);
-      sectionElement.appendChild(card);
-
-      window.setTimeout(() => {
-        card.classList.add("is-visible");
-      }, 100 + cardIndex * 85);
-
-      cardIndex += 1;
-    });
-
-    list.appendChild(sectionElement);
+  LINK_SECTIONS.forEach((section, index) => {
+    list.appendChild(createSection(section, index));
   });
 }
 
