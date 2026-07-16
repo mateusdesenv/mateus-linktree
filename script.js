@@ -81,7 +81,7 @@ const LINK_SECTIONS = [
         caption: "Solicite um orçamento",
         platform: "whatsapp",
         color: "#31d158",
-        url: "https://wa.me/52SEUNUMERO",
+        url: "https://wa.me/5548988512030",
         image: "./assets/icons/icon-whatsapp.svg",
       },
       {

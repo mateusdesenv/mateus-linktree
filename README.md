@@ -26,10 +26,6 @@ Os cards agora estão divididos em três categorias:
 - `Parcerias no TikTok`
 - `Redes sociais`
 
-Há uma URL que permanece como placeholder porque não foi informada:
-
-- WhatsApp: `https://wa.me/52SEUNUMERO`
-
 Os links já configurados são:
 
 - Vitrinefolio: `https://vitrinefolio.vercel.app/`
@@ -40,6 +36,7 @@ Os links já configurados são:
 - TikTok de Fallen: `https://www.tiktok.com/@hey_fallen_dallas22`
 - TikTok de Sarcástica: `https://www.tiktok.com/@sarcastica`
 - Codex Live Projects: `https://codexa-live-projects.vercel.app/`
+- WhatsApp da Codex: `https://wa.me/5548988512030`
 - Instagram da Codex: `https://www.instagram.com/co.dexaweb/`
 - LinkedIn da Codex: `https://www.linkedin.com/company/codexa-web`
 - LinkedIn pessoal: `https://www.linkedin.com/in/mateus-camargo-rodrigues/`
